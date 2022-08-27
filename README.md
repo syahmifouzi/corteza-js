@@ -22,6 +22,22 @@ The most common use cases for the `corteza-js` package include type definitions 
 
 <br />
 
+## My Note
+> rm -rf node_modules
+> yarn
+> yarn build
+> yarn link
+
+After run > yarn link
+Go to the corteza-vue
+and run:
+> rm -rf node_modules
+> yarn link "@cortezaproject/corteza-js"
+> yarn
+> yarn build
+
+
+
 ## What is Corteza?
 
 <div align="center">
