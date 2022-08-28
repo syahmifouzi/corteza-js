@@ -23,6 +23,35 @@ The most common use cases for the `corteza-js` package include type definitions 
 <br />
 
 ## My Note
+error rollup-plugin-styles@4.0.0: The engine "node" is incompatible with this module. Expected version "^12.20.0 || ^14.13.1 || >=16.0.0". Got "14.8.0"
+
+> Also keep note kene install golang also
+> bash Miniconda3-latest-Linux-x86_64.sh
+> initialize during the installation
+> conda config --set auto_activate_base false
+> conda create -n mimi -c conda-forge nodejs=14.13.1
+> conda activate mimi
+for enabling yarn (from official website)
+> corepack enable
+for node version < 16
+> npm i -g corepack
+for yarn version 1
+> npm install --global yarn
+
+
+If there is a warning to update conda
+> conda update -n base -c defaults conda
+
+conda search
+> conda search -c conda-forge nodejs
+
+conda remove:
+> conda env remove -n mimi
+
+yarn unlink:
+> yarn unlink
+
+
 > rm -rf node_modules
 > yarn
 > yarn build
@@ -31,10 +60,22 @@ The most common use cases for the `corteza-js` package include type definitions 
 After run > yarn link
 Go to the corteza-vue
 and run:
+> Change package.json > dependencies > "^file:/home/mimi/corteza-bin/corteza-js" > OR maybe not needed?
 > rm -rf node_modules
 > yarn link "@cortezaproject/corteza-js"
 > yarn
 > yarn build
+> yarn link
+
+For webapp-one and all other apps
+> Change package.json > dependencies > "^file:/home/mimi/corteza-bin/corteza-js" > OR maybe not needed?
+> Change package.json > dependencies > "^file:/home/mimi/corteza-bin/corteza-vue" > OR maybe not needed?
+> rm -rf node_modules
+> yarn link "@cortezaproject/corteza-js"
+> yarn link "@cortezaproject/corteza-vue"
+> yarn
+> yarn build
+
 
 
 
